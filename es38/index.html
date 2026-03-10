@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inserimento dati libro</title>
+</head>
+
+<body>
+
+<h2>Inserimento dati libro</h2>
+
+<form action="risultato.php" method="post">
+
+    Autore:<br>
+    <input type="text" name="autore"><br><br>
+
+    Titolo:<br>
+    <input type="text" name="titolo"><br><br>
+
+    Genere:<br>
+
+    <input type="checkbox" name="genere[]" value="Comico"> Comico<br>
+    <input type="checkbox" name="genere[]" value="Giallo"> Giallo<br>
+    <input type="checkbox" name="genere[]" value="Storico"> Storico<br>
+    <input type="checkbox" name="genere[]" value="Fantascienza"> Fantascienza<br>
+    <input type="checkbox" name="genere[]" value="Fantasy"> Fantasy<br>
+    <input type="checkbox" name="genere[]" value="Horror"> Horror<br>
+
+    <br>
+
+    <input type="submit" value="Invia">
+    <input type="reset" value="Cancella">
+
+</form>
+
+</body>
+</html>
