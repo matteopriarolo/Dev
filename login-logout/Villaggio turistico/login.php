@@ -44,7 +44,8 @@ if (isset($_POST["login"])) {
         header("location: gestione.php");
         exit;
     } else {
-        echo "<p>Login fallito. Riprova.</p>";
+        header("location: register.php?error=invalid_credentials&email=$email&cognome=$cognome");
+        exit;
     }
 }
 ?>
