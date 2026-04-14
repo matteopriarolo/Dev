@@ -31,7 +31,9 @@ CREATE TABLE IF NOT EXISTS informatori (
     DataNascita DATE,
     Ruolo VARCHAR(20),
     Ambito VARCHAR(20),
-    Psw TEXT
+    Psw TEXT,
+    ID_professionista INT,
+    FOREIGN KEY (ID_professionista) REFERENCES professionisti(CF)
 );
 
 CREATE TABLE IF NOT EXISTS visite (
