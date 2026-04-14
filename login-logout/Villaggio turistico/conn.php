@@ -1,11 +1,11 @@
 <?php
-$username = "root";
-$password = "";
-$server = "localhost";
-$database = "villaggio_turistico";
-$conn = mysqli_connect($server, $username, $password, $database);
+    $host     = "localhost";
+    $utente   = "root";
+    $password = "";
+    $database = "villaggi_turistici";
 
-if (!$conn) {
-    die ("errore di connessione");
-}
+    $connessione = mysqli_connect($host, $utente, $password, $database);
+    if (!$connessione) {
+        die("Errore di connessione: " . mysqli_connect_error());
+    }
 ?>
