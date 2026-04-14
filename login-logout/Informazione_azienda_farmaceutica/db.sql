@@ -32,13 +32,13 @@ CREATE TABLE IF NOT EXISTS informatori (
     Ruolo VARCHAR(20),
     Ambito VARCHAR(20),
     Psw TEXT,
-    ID_professionista INT,
-    FOREIGN KEY (ID_professionista) REFERENCES professionisti(CF)
+    CF_professionista CHAR(16),
+    FOREIGN KEY (CF_professionista) REFERENCES professionisti(CF)
 );
 
 CREATE TABLE IF NOT EXISTS visite (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    ID_paziente INT,
+    CF_paziente CHAR(16),
     Data_visita DATETIME,
     Luogo VARCHAR(40),
     Svolta DATETIME,
