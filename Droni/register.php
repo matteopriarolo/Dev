@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,16 @@
     <main>
         <form action="register_auth.php" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username" required>
             <label for="ruolo">Ruolo:</label>
-            <input type="text" id="ruolo" name="ruolo" required><br><br>
+            <select name="ruolo" id="ruolo" require>
+                <option value="amministratore">Amministratore</option>
+                <option value="operatore">Operatore</option>
+                <option value="pilota">Pilota</option>
+            </select>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br><br>
-            <input type="submit" value="Register">
+            
         </form>
     </main>
     

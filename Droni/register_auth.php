@@ -14,9 +14,11 @@
 
         $sql = "INSERT INTO utenti (username, password, ruolo) VALUES ('$username', '$hashed_password', '$ruolo')";
         if ($conn->query($sql) === TRUE) {
-            echo "Registrazione avvenuta con successo!";
+            header("Location: login.php");
+            exit();
         } else {
-            echo "Errore durante la registrazione: " . $conn->error;
+            header("Location: register.php?error=1");
+            exit();
         }
     }
 ?>

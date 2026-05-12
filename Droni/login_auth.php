@@ -3,7 +3,6 @@
 
     if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username']) && isset($_POST['password'])) {
 
-
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -17,18 +16,16 @@
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['ruolo'] = $row['ruolo'];
-                header('Location: dashboard.php');
-                exit;
+            header('Location: dashboard.php');
+            exit;
             } else {
-                echo "Password errata!";
+                header('Location: login.php?error=1');
+                exit();
             }
-        } else {
-            echo "Username non trovato!";
         }
 
-
-
     } else {
-        echo "Per favore, inserisci username e password!";
+        header('Location: login.php?error=1');
+        exit();
     }
 ?>
